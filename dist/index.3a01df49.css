@@ -1,13 +1,15 @@
 code {
   box-sizing: border-box;
   text-align: center;
-  width: 100%;
-  height: 24px;
+  width: 439px;
+  height: 30px;
   color: #000;
   background: #fbab4030;
   border: 2px solid #fbab40;
-  border-radius: 3px;
+  border-radius: 2px;
   margin-bottom: 16px;
+  padding: 6px 7px 10px;
+  font-family: Courier Prime;
   font-size: 18px;
   display: block;
 }
@@ -25,6 +27,8 @@ code {
 .container {
   width: 95%;
   max-width: 600px;
+  height: auto;
+  border: 2px solid #000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -42,6 +46,10 @@ code {
 .header h3 {
   justify-content: center;
   align-items: center;
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
   display: flex;
 }
 
@@ -56,7 +64,7 @@ code {
   height: 26px;
   position: relative;
   top: 45px;
-  left: 72px;
+  left: 115px;
 }
 
 .steps > span > img {
