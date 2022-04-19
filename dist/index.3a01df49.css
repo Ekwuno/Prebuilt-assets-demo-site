@@ -2,23 +2,21 @@ pre {
   box-sizing: border-box;
   text-align: center;
   width: 439px;
-  height: 30px;
   color: #000;
   background: #fbab4030;
   border: 2px solid #fbab40;
   border-radius: 2px;
   justify-content: space-between;
-  margin-bottom: 16px;
-  padding: 6px 7px 10px;
+  margin: 0 0 16px;
+  padding: 16px 24px;
   font-family: Courier Prime;
-  font-size: 18px;
+  font-size: 1.2rem;
   display: flex;
 }
 
 .installation-steps > h3 {
   text-align: center;
   color: #000;
-  font-family: Source Sans Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -29,7 +27,7 @@ pre {
   width: 95%;
   max-width: 600px;
   height: auto;
-  border: 2px solid #000;
+  border: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -47,7 +45,6 @@ pre {
 .header h3 {
   justify-content: center;
   align-items: center;
-  font-family: Source Sans Pro;
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
@@ -60,12 +57,15 @@ pre {
   display: flex;
 }
 
-.installation-steps > span > img {
+.installation-header img {
   width: 31px;
   height: 26px;
-  position: relative;
-  top: 45px;
-  left: 115px;
+}
+
+.installation-header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .installation-steps > span {
@@ -73,12 +73,16 @@ pre {
   display: flex;
 }
 
-.steps > span > img {
+.steps > div > img {
   width: 29px;
   height: 28px;
-  position: relative;
-  top: 45px;
-  left: 83px;
+  margin-right: 10px;
+}
+
+.steps > div {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 h3 {
@@ -87,24 +91,70 @@ h3 {
   font-weight: 400;
 }
 
-li {
-  font-family: Source Sans Pro;
+button {
+  width: auto;
+  background-color: #0000;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-button {
-  color: 10e1e;
-  text-shadow: 0 0 2px #c4c4c4;
-  height: 19px;
-  background-color: #828282;
-  border: 1px ridge #7b7b7c;
-  border-radius: 5px;
-  padding: .15rem;
-  font-size: .9rem;
+button > svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+li {
+  font-size: 1rem;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #bcbabb;
+  background-color: #0000;
+}
+
+body {
+  margin: 0;
+  padding-top: 5%;
+  font-family: Source Sans Pro;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  pre {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: .8rem;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  .header img {
+    margin: 0 auto;
+  }
+
+  .installation-steps {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */

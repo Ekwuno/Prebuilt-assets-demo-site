@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Site</title>
-    <link href="style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
-</head>
-<body>
-   <div class="container">
-        <div class="header">
-            <h1>Uploading Pre-built Assets</h1>
-            <img src="/assets/Picture1.png" alt="" />
-            <h3> Directly upload assets to Pages and <br/> deploy within seconds:</h3>
-        </div>
-        <div class="installation-steps">
-            <span> <img src="./assets/cloudflare-workers.png"/></span> <h3>Use Wrangler CLI</h3>
-           <pre><code>$ wrangler pages project create </code><svg> </svg></pre>
-           <pre><code>$ wrangler pages project publish</code><svg> </svg></pre>
-        </div>
-        <div class="steps">
-            <span> <img src="./assets/cloud-upload.png"/></span> <h3>Drag and drop</h3>
-            <ol>
-                <li>Create New project and select "Upload assets"</li>
-                <li>Name your project</li>
-                <li>Drag and drop your assets to the "Upload" area</li>
-                <li>Click save and "Deploy"</li>
-            </ol>
-        </div>
-   </div>
-</body>
-<script>
-        const copyButtonLabel = "copy code";
-       let blocks = document.querySelectorAll("pre")
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Demo Site</title>
+		<link href="style.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Courier Prime"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Source Sans Pro"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>Uploading Pre-built Assets</h1>
+				<img src="/assets/Picture1.png" alt="" />
+				<h3>
+					Directly upload assets to Pages and <br />
+					deploy within seconds:
+				</h3>
+			</div>
+			<div class="installation-steps">
+				<div class="installation-header">
+					<img src="./assets/cloudflare-workers.png" />
+					<h3>Use Wrangler CLI</h3>
+				</div>
+				<pre><code>$ wrangler pages project create </code> <button type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M384 96V0H272c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48V128h-95.1c-18.5 0-32.9-14.4-32.9-32zm32-96v96h96L416 0zM192 352V128H48c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48v-48h-32c-35.3 0-64-28.7-64-64z" />
+                    </svg>
+					<span></span>
+                </button> </pre>
+				<pre><code>$ wrangler pages project publish</code>
+                    <button type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M384 96V0H272c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48V128h-95.1c-18.5 0-32.9-14.4-32.9-32zm32-96v96h96L416 0zM192 352V128H48c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48v-48h-32c-35.3 0-64-28.7-64-64z"/></svg>
+			<span></span>
+				</button>
+                </pre>
+			</div>
+			<div class="steps">
+				<div>
+					<img src="./assets/cloud-upload.png" />
+					<h3>Drag and drop</h3>
+				</div>
+				<ol>
+					<li>Create New project and select "Upload assets"</li>
+					<li>Name your project</li>
+					<li>Drag and drop your assets to the "Upload" area</li>
+					<li>Click save and "Deploy"</li>
+				</ol>
+			</div>
+		</div>
+	</body>
+	<script>
+		// const copyButtonLabel = 'copy code';
+		let blocks = document.querySelectorAll('pre');
+		blocks.forEach((block, index) => {
+			// only add button if browser supports Clipboard API
+			if (navigator.clipboard) {
+				// var svg = document.getElementsByTagName('svg')[0];
+				// var newElement = document.createElementNS(
+				// 	'http://www.w3.org/2000/svg',
+				// 	'path'
+				// );
+				// newElement.setAttribute('d', svgD); //Set path's data
+				// svg.setAttribute('viewBox', '0 0 512 512');
 
-        blocks.forEach((block) => {
-            // only add button if browser supports Clipboard API
-            if (navigator.clipboard) {
-                // var svg = document.getElementsByTagName('svg')[0]
-                // var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-                // newElement.setAttribute("d", "M 0 0 L 10 10"); //Set path's data
-                // newElement.style.stroke = "#000"; //Set stroke colour
-                // newElement.style.strokeWidth = "5px"; //Set stroke width
-                // svg.appendChild(newElement);
+				// // newElement.style.stroke = "#000"; //Set stroke colour
+				// // newElement.style.strokeWidth = "5px"; //Set stroke width
+				// svg.appendChild(newElement);
 
+				// let button = document.createElement('button');
+				// button.innerText = copyButtonLabel;
+				const button = document.querySelectorAll('button')[index];
+				button.addEventListener('click', copyCode);
+				block.appendChild(button);
+			}
+		});
 
+		async function copyCode(event) {
+			const button = event.srcElement;
+			const pre = button.parentElement;
+			let code = pre.querySelector('code');
+			let text = code.innerText;
+			await navigator.clipboard.writeText(text);
 
-                let button = document.createElement("button");
-                button.innerText = copyButtonLabel;
-                button.addEventListener("click", copyCode);
-                block.appendChild(button);
-            }
-        });
+			// button.innerText = "copied";
 
-        async function copyCode(event) {
-                const button = event.srcElement;
-                const pre = button.parentElement;
-                let code = pre.querySelector("code");
-                let text = code.innerText;
-                await navigator.clipboard.writeText(text);
-
-                button.innerText = "code copied";
-
-                setTimeout(() => {
-                    button.innerText = copyButtonLabel;
-                }, 1000)
-            }
-
-    
-        
-</script>
+			setTimeout(() => {
+				button.innerText = copyButtonLabel;
+			}, 1000);
+		}
+	</script>
 </html>
