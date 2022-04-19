@@ -59,25 +59,10 @@
 		</div>
 	</body>
 	<script>
-		// const copyButtonLabel = 'copy code';
 		let blocks = document.querySelectorAll('pre');
 		blocks.forEach((block, index) => {
 			// only add button if browser supports Clipboard API
 			if (navigator.clipboard) {
-				// var svg = document.getElementsByTagName('svg')[0];
-				// var newElement = document.createElementNS(
-				// 	'http://www.w3.org/2000/svg',
-				// 	'path'
-				// );
-				// newElement.setAttribute('d', svgD); //Set path's data
-				// svg.setAttribute('viewBox', '0 0 512 512');
-
-				// // newElement.style.stroke = "#000"; //Set stroke colour
-				// // newElement.style.strokeWidth = "5px"; //Set stroke width
-				// svg.appendChild(newElement);
-
-				// let button = document.createElement('button');
-				// button.innerText = copyButtonLabel;
 				const button = document.querySelectorAll('button')[index];
 				button.addEventListener('click', copyCode);
 				block.appendChild(button);

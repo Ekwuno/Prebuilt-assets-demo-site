@@ -5,9 +5,7 @@ pre {
 	text-align: center;
 	font-size: 1.2rem;
 	width: 439px;
-	/* height: 30px; */
 	font-family: Courier Prime;
-	/* padding: 1px, 1px, 1px, 1px; */
 	color: black;
 	padding: 16px 24px;
 	background: rgba(251, 171, 64, 0.19);
@@ -16,23 +14,13 @@ pre {
 	margin-bottom: 16px;
 	display: flex;
 	justify-content: space-between;
-	/* font-family: 'Courier Prime';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 13px;
-    text-align: center; */
 }
 
 .installation-steps > h3 {
-	/* position: absolute;
-    width: 153px;
-    height: 23px; */
 	font-style: normal;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 23px;
-	/* identical to box height */
 
 	text-align: center;
 
@@ -50,7 +38,6 @@ pre {
 	margin: auto;
 	border: #fbab40;
 	height: auto;
-	/* border: 2px solid black; */
 }
 
 .header img {
