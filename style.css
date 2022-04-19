@@ -1,4 +1,5 @@
 pre {
+	margin: 0;
 	display: block;
 	box-sizing: border-box;
 	text-align: center;
@@ -74,24 +75,29 @@ pre {
 	justify-content: center;
 }
 
-.installation-steps > span > img {
-	position: relative;
+.installation-header img {
 	width: 31px;
 	height: 26px;
-	top: 45px;
-	left: 115px;
+}
+.installation-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .installation-steps > span {
 	display: flex;
 	flex-direction: column;
 }
-.steps > span > img {
-	position: relative;
+.steps > div > img {
 	width: 29px;
 	height: 28px;
-	top: 45px;
-	left: 83px;
+	margin-right: 10px;
+}
+.steps > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 h3 {
@@ -111,8 +117,11 @@ button {
 button > svg {
 	width: 1.2rem;
 	height: 1.2rem;
+    
 }
-
+li {
+	font-size: 1rem;
+}
 button:hover {
 	cursor: pointer;
 	background-color: transparent;
@@ -120,31 +129,36 @@ button:hover {
 body {
 	font-family: 'Source Sans Pro';
 	padding-top: 5%;
+	margin: 0;
 }
 
 @media screen and (max-width: 600px) {
 	.container {
-		width: 100%;
-		max-width: 100%;
 		padding: 10px;
 	}
 	pre {
+		font-size: 0.8rem;
+		padding: 8px 12px;
 		width: 100%;
-        font-size: .8rem;
-        padding: 8px 12px;
-        max-width: 100vw;
 	}
 	body {
 		width: 100vw;
 	}
 	.header img {
 		margin-left: 0;
-        margin: 0 auto;
+		margin: 0 auto;
 	}
-    .installation-steps{
-        width: 100%
-    }
-    h1{
-        font-size: 1.8rem;
-    }
+	.installation-steps {
+		width:  100%;
+		box-sizing: border-box;
+	}
+	h1 {
+		font-size: 1.6rem;
+	}
+	ol {
+		padding-left: 20px;
+	}
+	li {
+		margin-bottom: 5px;
+	}
 }

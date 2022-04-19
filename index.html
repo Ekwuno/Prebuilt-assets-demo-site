@@ -27,7 +27,7 @@
 			</div>
 			<div class="installation-steps">
 				<div class="installation-header">
-					<img src="/cloudflare-workers.3d71ca2b.png" />
+					<img src="./assets/cloudflare-workers.png" />
 					<h3>Use Wrangler CLI</h3>
 				</div>
 				<pre><code>$ wrangler pages project create </code> <button type="button">
@@ -35,16 +35,20 @@
                         <path
                             d="M384 96V0H272c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48V128h-95.1c-18.5 0-32.9-14.4-32.9-32zm32-96v96h96L416 0zM192 352V128H48c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48v-48h-32c-35.3 0-64-28.7-64-64z" />
                     </svg>
+					<span></span>
                 </button> </pre>
 				<pre><code>$ wrangler pages project publish</code>
                     <button type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M384 96V0H272c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48V128h-95.1c-18.5 0-32.9-14.4-32.9-32zm32-96v96h96L416 0zM192 352V128H48c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48v-48h-32c-35.3 0-64-28.7-64-64z"/></svg>
-            </button>
+			<span></span>
+				</button>
                 </pre>
 			</div>
 			<div class="steps">
-				<span> <img src="./assets/cloud-upload.png" /></span>
-				<h3>Drag and drop</h3>
+				<div>
+					<img src="./assets/cloud-upload.png" />
+					<h3>Drag and drop</h3>
+				</div>
 				<ol>
 					<li>Create New project and select "Upload assets"</li>
 					<li>Name your project</li>
@@ -57,7 +61,7 @@
 	<script>
 		// const copyButtonLabel = 'copy code';
 		let blocks = document.querySelectorAll('pre');
-		blocks.forEach((block) => {
+		blocks.forEach((block, index) => {
 			// only add button if browser supports Clipboard API
 			if (navigator.clipboard) {
 				// var svg = document.getElementsByTagName('svg')[0];
@@ -74,7 +78,7 @@
 
 				// let button = document.createElement('button');
 				// button.innerText = copyButtonLabel;
-				const button = document.querySelectorAll('button');
+				const button = document.querySelectorAll('button')[index];
 				button.addEventListener('click', copyCode);
 				block.appendChild(button);
 			}
@@ -87,7 +91,7 @@
 			let text = code.innerText;
 			await navigator.clipboard.writeText(text);
 
-			// button.innerText = "code copied";
+			// button.innerText = "copied";
 
 			setTimeout(() => {
 				button.innerText = copyButtonLabel;
