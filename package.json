@@ -1,10 +1,10 @@
 {
   "name": "prebuilt-assests-demo-site",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+ "source": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
