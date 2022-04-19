@@ -18,8 +18,8 @@
         </div>
         <div class="installation-steps">
             <span> <img src="/cloudflare-workers.3d71ca2b.png"></span> <h3>Use Wrangler CLI</h3>
-            <code>$ wrangler pages project create</code>
-            <code>$ wrangler pages project publish</code>
+           <pre><code>$ wrangler pages project create </code><svg> </svg></pre>
+           <pre><code>$ wrangler pages project publish</code><svg> </svg></pre>
         </div>
         <div class="steps">
             <span> <img src="/cloud-upload.98014453.png"></span> <h3>Drag and drop</h3>
@@ -31,5 +31,35 @@
             </ol>
         </div>
    </div>
-<script src="/Prebuilt-assests-demo-site.3464ddca.js"></script></body>
+</body>
+<script>const copyButtonLabel = "copy code";
+let blocks = document.querySelectorAll("pre");
+blocks.forEach((block)=>{
+    // only add button if browser supports Clipboard API
+    if (navigator.clipboard) {
+        // var svg = document.getElementsByTagName('svg')[0]
+        // var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        // newElement.setAttribute("d", "M 0 0 L 10 10"); //Set path's data
+        // newElement.style.stroke = "#000"; //Set stroke colour
+        // newElement.style.strokeWidth = "5px"; //Set stroke width
+        // svg.appendChild(newElement);
+        let button = document.createElement("button");
+        button.innerText = copyButtonLabel;
+        button.addEventListener("click", copyCode);
+        block.appendChild(button);
+    }
+});
+async function copyCode(event) {
+    const button = event.srcElement;
+    const pre = button.parentElement;
+    let code = pre.querySelector("code");
+    let text = code.innerText;
+    await navigator.clipboard.writeText(text);
+    button.innerText = "code copied";
+    setTimeout(()=>{
+        button.innerText = copyButtonLabel;
+    }, 1000);
+}
+
+</script>
 </html>
