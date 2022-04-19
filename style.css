@@ -117,7 +117,7 @@ button {
 button > svg {
 	width: 1.2rem;
 	height: 1.2rem;
-    
+
 }
 li {
 	font-size: 1rem;
@@ -130,6 +130,7 @@ body {
 	font-family: 'Source Sans Pro';
 	padding-top: 5%;
 	margin: 0;
+    
 }
 
 @media screen and (max-width: 600px) {
