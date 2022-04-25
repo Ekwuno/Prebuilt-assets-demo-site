@@ -1,128 +1,173 @@
-pre {
-    display: block;
+*{
     box-sizing: border-box;
-    text-align: center;
-    font-size: 18px;
-    width: 439px;
-    height: 30px;
-    font-family: Courier Prime;
-    /* padding: 1px, 1px, 1px, 1px; */
-    color: black;
-    padding: 6px 7px 10px 7px;
-    background: rgba(251, 171, 64, 0.19);
-    border: 2px solid #FBAB40;
-    border-radius: 2px;
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
-    /* font-family: 'Courier Prime';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 13px;
-    text-align: center; */
+    font-family: 'SF Pro Text';
+    margin: auto;
 }
 
-.installation-steps > h3 {
-    /* position: absolute;
-    width: 153px;
-    height: 23px; */
-    
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 23px;
-    /* identical to box height */
-    
-    text-align: center;
-    
-    color: #000000;
-}
 
 .container {
     display: flex;
+    background-color: black;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 50px 0 24px 0;
-    width: 95%;
-    max-width: 600px;
+    width: 100%;
+    /* max-width: 600px; */
     margin: auto;
-    border: #FBAB40;
-    height: auto;
-    border: 2px solid black;
-}
+    border: #fbab40;
+    height: 100%;
+    background-image: url(./assets/Page\ 11.png);
+    background-repeat:no-repeat ;
+    background-size: 100% 100%;
+    background-position: center;
+    box-shadow: inset 2000px 0 0 0 rgba(27, 27, 27, 0.9);
+    /* background:url("./assets/colns-background.png") no-repeat center; */
+    
+    /* border: 2px solid black; */
 
-.header img {
-    width: 241px;
-    height: 164px;
-    margin-left: 70px;
+    /* Vector */
+    
+    /* position: absolute;
+    left: 0%;
+    right: 0.19%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #FFFFFF; */
+    /* background:url("./assets/colns-background.png") no-repeat fixed;
+    height: 100%;
+    overflow: hidden;
+    color: #FFFFFF;
+    position: absolute; */
 }
 
 .header h3 {
-    /* width: 100%; */
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        font-family: 'Source Sans Pro';
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 23px;
+    text-align: center;
+    color: #ff9e40;
+    font-family: SF Pro Text;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    line-height: 36px;
 }
 
-
-.header{
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 0px;
+    /* width: 706px;
+    height: 67px;
+    left: 0px;
+    top: 52px;
+    position: static; */
 }
 
-.installation-steps > span > img {
-     position: relative;
-    width: 31px;
-    height: 26px;
-    top: 45px;
-    left: 115px; 
-}
 
-.installation-steps > span {
-    display: flex;
-    flex-direction: column;
+.header > h1 {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 150%;
+    /* or 72px */
     
-}
-.steps > span > img {
-    position: relative;
-    width: 29px;
-    height: 28px;
-    top: 45px;
-    left: 83px;
-}
-
-
-h3 {
-    font-weight: 400;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
     text-align: center;
+    
+    color: #FFFFFF;
 }
 
-li {
-    font-family: 'Source Sans Pro';
+.header > p {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    /* or 36px */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    order: 2;
+    flex-grow: 0;
+    margin: 16px 0px;
 }
 
-button {
-
-    font-size: .9rem;
-    padding: .15rem;
-    background-color: #828282;
-    color: 1e1e1e;
-    border: ridge 1px #7b7b7c;
-    border-radius: 5px;
-    text-shadow: #c4c4c4 0 0 2px;
-    height: 19px;
+.options {
+display: flex;
+flex-direction: row;
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: #bcbabb;
+.options > a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    margin: 0px 8px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+/* .options > img {
+
+} */
+
+.learn-more{
+        margin-top: 81px;
+        
+}
+
+.learn-more > button {
+    background: #F6821F;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    width: 180px;
+    height: 55px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    pre {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    .header img {
+        margin-left: 0;
+        margin: 0 auto;
+    }
+
+    .installation-steps {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    ol {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
 }

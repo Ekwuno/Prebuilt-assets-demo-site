@@ -1,110 +1,137 @@
-pre {
+* {
   box-sizing: border-box;
-  text-align: center;
-  width: 439px;
-  height: 30px;
-  color: #000;
-  background: #fbab4030;
-  border: 2px solid #fbab40;
-  border-radius: 2px;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  padding: 6px 7px 10px;
-  font-family: Courier Prime;
-  font-size: 18px;
-  display: flex;
-}
-
-.installation-steps > h3 {
-  text-align: center;
-  color: #000;
-  font-family: Source Sans Pro;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23px;
+  margin: auto;
+  font-family: SF Pro Text;
 }
 
 .container {
-  width: 95%;
-  max-width: 600px;
-  height: auto;
-  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("Page 11.c5202b0e.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
   padding: 50px 0 24px;
   display: flex;
-}
-
-.header img {
-  width: 241px;
-  height: 164px;
-  margin-left: 70px;
+  box-shadow: inset 2000px 0 #1b1b1be6;
 }
 
 .header h3 {
-  justify-content: center;
-  align-items: center;
-  font-family: Source Sans Pro;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23px;
-  display: flex;
+  text-align: center;
+  color: #ff9e40;
+  margin: 0;
+  font-family: SF Pro Text;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
 }
 
 .header {
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 0;
   display: flex;
 }
 
-.installation-steps > span > img {
-  width: 31px;
-  height: 26px;
-  position: relative;
-  top: 45px;
-  left: 115px;
-}
-
-.installation-steps > span {
-  flex-direction: column;
-  display: flex;
-}
-
-.steps > span > img {
-  width: 29px;
-  height: 28px;
-  position: relative;
-  top: 45px;
-  left: 83px;
-}
-
-h3 {
+.header > h1 {
   text-align: center;
-  font-size: 18px;
+  color: #fff;
+  align-items: center;
+  font-family: SF Pro Text;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  display: flex;
+}
+
+.header > p {
+  text-align: center;
+  color: #fff;
+  flex-grow: 0;
+  order: 2;
+  margin: 16px 0;
+  font-family: SF Pro Text;
+  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
+  line-height: 150%;
 }
 
-li {
-  font-family: Source Sans Pro;
+.options {
+  flex-direction: row;
+  display: flex;
 }
 
-button {
-  color: 10e1e;
-  text-shadow: 0 0 2px #c4c4c4;
-  height: 19px;
-  background-color: #828282;
-  border: 1px ridge #7b7b7c;
-  border-radius: 5px;
-  padding: .15rem;
-  font-size: .9rem;
+.options > a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: underline;
 }
 
-button:hover {
-  cursor: pointer;
-  background-color: #bcbabb;
+.learn-more {
+  margin-top: 81px;
+}
+
+.learn-more > button {
+  width: 180px;
+  height: 55px;
+  color: #fff;
+  text-align: center;
+  background: #f6821f;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  box-shadow: 0 0 4px #00000040;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  pre {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: .8rem;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  .header img {
+    margin: 0 auto;
+  }
+
+  .installation-steps {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */
