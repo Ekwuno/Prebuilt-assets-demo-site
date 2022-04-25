@@ -130,6 +130,11 @@
 	margin-top: 75px;
 }
 
+.logo > img{
+width: 160px;
+height: 64px;
+}
+
 .learn-more > a > button {
 	background: #f6821f;
 	border-radius: 4px;

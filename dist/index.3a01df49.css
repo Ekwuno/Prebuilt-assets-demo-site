@@ -89,6 +89,11 @@
   margin-top: 75px;
 }
 
+.logo > img {
+  width: 160px;
+  height: 64px;
+}
+
 .learn-more > a > button {
   width: 180px;
   height: 55px;
