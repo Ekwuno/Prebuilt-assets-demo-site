@@ -135,7 +135,13 @@ flex-direction: row;
 
 @media screen and (max-width: 600px) {
     .container {
-        padding: 10px;
+        /* padding: 10px; */
+        background-image: url(./assets/Page\ 11.png);
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        box-shadow: inset 2000px 0 0 0 rgba(27, 27, 27, 0.9);
+
     }
 
     pre {
@@ -150,7 +156,7 @@ flex-direction: row;
 
     .header img {
         margin-left: 0;
-        margin: 0 auto;
+        /* margin: 0 auto; */
     }
 
     .installation-steps {

@@ -91,7 +91,11 @@
 
 @media screen and (max-width: 600px) {
   .container {
-    padding: 10px;
+    background-image: url("Page 11.c5202b0e.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: inset 2000px 0 #1b1b1be6;
   }
 
   pre {
@@ -105,7 +109,7 @@
   }
 
   .header img {
-    margin: 0 auto;
+    margin-left: 0;
   }
 
   .installation-steps {
