@@ -149,7 +149,7 @@
 	.bg-image {
 		position: absolute;
 		width: 100%;
-		top: 40%;
+		top: -80%;
 	}
 }
 @media screen and (max-width: 600px) {
