@@ -15,7 +15,8 @@ jobs:
     steps:
       - checkout
       - run: npm install 
-      - run: npm install wrangler@beta
+      - run: npx install wrangler@beta
+      - run: npx wrangler --version
       - run: npm run build
       - run: ls dist/
      
