@@ -5,13 +5,11 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  pages-publish:
+  say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    executor: my-ubuntu-exec
-    machine:
-      image: ubuntu-2004:current
-      resource_class: large
+    docker:
+      - image: cimg/base:stable
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
@@ -19,30 +17,10 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      - run:
-          name: Install Wrangler2 globally
-          command: npm install -g wrangler@beta
-      - run: 
-          name: Install dependencies
-          command: npm install 
-          
-      - run:
-        name: Build project
-      - run: npm run build # Switch this out with yor own build command
-      - name: List files in the dist directory
-        run: |
-          ls ${{ github.workspace }}/dist
-      - name: Check Wrangler version
-        run: wrangler --version
-      - name: Pages publish
-      #  env:
-      #    CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #    CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      # - run: wrangler pages publish dist
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  Publish-to-pages:
+  say-hello-workflow:
     jobs:
-      - pages-publish
+      - say-hello
