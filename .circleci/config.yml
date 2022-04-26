@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
-      - run: npx install -g wrangler@beta
+      - run: npm install wrangler@beta
       - run: npm install 
 
 # Invoke jobs via workflows
