@@ -28,7 +28,7 @@ jobs:
           
       - run:
         name: Build project
-        run: npm run build # Switch this out with yor own build command
+      - run: npm run build # Switch this out with yor own build command
       - name: List files in the dist directory
         run: |
           ls ${{ github.workspace }}/dist
