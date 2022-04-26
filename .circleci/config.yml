@@ -23,7 +23,7 @@ jobs:
         # environment:
         #  CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
         #  CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
-      - run: wrangler pages publish dist
+      - run: npx wrangler pages publish dist
      
 
 # Invoke jobs via workflows
