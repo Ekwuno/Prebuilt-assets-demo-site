@@ -16,7 +16,6 @@ jobs:
       - checkout
       - run: npm install 
       - run: npm install wrangler@beta
-      - run: wrangler --version
       - run: npm run build
      
 
