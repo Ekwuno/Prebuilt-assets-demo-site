@@ -20,7 +20,7 @@ jobs:
       - run: npm run build
       - run: ls dist/
       # Environment variable for a single command shell
-      - environment:
+        environment:
          CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
          CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
       - run: wrangler pages publish dist
