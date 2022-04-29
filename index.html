@@ -19,6 +19,8 @@
   <body>
     <div class="container">
       <div class="header">
+        <!-- TODO: Use a CSS background-image for this, rather than an img element.
+					It's an illustration rather than anything semantic, and is also taking z-index precendece over text, so you can't select or click on anything. -->
         <img class="bg-image" src="/assets/world.svg" />
         <h3>Example project</h3>
         <h1>Welcome to Cloudflare Pages</h1>
@@ -28,12 +30,16 @@
         </p>
         <p>Create new deployments using:</p>
         <section class="options">
-          <img src="/assets/terminal.png" /> <a href="">Wrangler CLI </a>
-          <img src="/assets/cloud-upload.png" /> <a href=""> Dashboard</a>
+          <!-- TODO: Use SVGs for these icons rather than PNGs.
+					https://components.cloudflare-ui.com/images/component-icon -->
+					<!-- TODO: Links -->
+          <a href=""><img src="/assets/terminal.png" /> Wrangler CLI</a>
+          <a href=""></a><img src="/assets/cloud-upload.png" /> Dashboard</a>
         </section>
       </div>
 
       <section class="learn-more">
+				<!-- TODO: Confirm link -->
         <a
           href="https://developers.cloudflare.com/pages/platform/direct-uploads"
         >
@@ -41,7 +47,9 @@
         </a>
       </section>
       <div class="logo">
-        <img src="/assets/cloudflare-pages.svg" />
+        <a href="https://pages.cloudflare.com/" target="_blank">
+          <img src="/assets/cloudflare-pages.svg"
+        /></a>
       </div>
     </div>
   </body>
