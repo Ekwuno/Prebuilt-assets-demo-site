@@ -30,7 +30,6 @@
 .header h3 {
   text-align: center;
   color: #ff9e40;
-  font-family: SF Pro Text;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -49,7 +48,6 @@
 }
 
 .header > h1 {
-  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -61,7 +59,6 @@
 }
 
 .header > p {
-  font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
