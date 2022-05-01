@@ -1,4 +1,7 @@
 language: node_js
+branches:
+  only:
+    - travis-ci-test
 install:
   - npm install
 script:
