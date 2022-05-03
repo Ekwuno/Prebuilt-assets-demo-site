@@ -15,25 +15,25 @@ jobs:
     steps:
       - checkout
       - run: 
-					name: Install dependencies
-					command: npm install 
+	name: Install dependencies
+	command: npm install 
       - run: 
-					name: Install Wrangler as dev dependency
-					command: npm install wrangler@beta
+	name: Install Wrangler as dev dependency
+	command: npm install wrangler@beta
       - run: 
-					name: Check for Wrangler version
-					command: npx wrangler --version
+	name: Check for Wrangler version
+	command: npx wrangler --version
       - run: 
-					name: Run build command
-					command: npm run build
+	name: Run build command
+        command: npm run build
       - run: ls dist/
       # Environment variable for a single command shell
         # environment:
         #  CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
         #  CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
       # - run: 
-			#    name: Publish to Pages
-			# 	 command: npx wrangler pages publish dist
+	# name: Publish to Pages
+	# command: npx wrangler pages publish dist
      
 
 # Invoke jobs via workflows
