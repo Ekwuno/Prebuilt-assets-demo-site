@@ -14,16 +14,26 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: npm install 
-      - run: npm install wrangler@beta
-      - run: npx wrangler --version
-      - run: npm run build
+      - run: 
+					name: Install dependencies
+					command: npm install 
+      - run: 
+					name: Install Wrangler as dev dependency
+					command: npm install wrangler@beta
+      - run: 
+					name: Check for Wrangler version
+					command: npx wrangler --version
+      - run: 
+					name: Run build command
+					command: npm run build
       - run: ls dist/
       # Environment variable for a single command shell
         # environment:
         #  CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
         #  CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
-      # - run: npx wrangler pages publish dist
+      # - run: 
+			#    name: Publish to Pages
+			# 	 command: npx wrangler pages publish dist
      
 
 # Invoke jobs via workflows
