@@ -27,7 +27,7 @@ jobs:
 	       name: Run build command
          command: npm run build
       - run: ls dist/
-      # Environment variable for a single command shell
+      # Environment variable for a single command shells
         # environment:
         #  CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
         #  CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
