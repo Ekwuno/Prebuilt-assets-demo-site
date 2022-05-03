@@ -36,8 +36,8 @@ jobs:
 	# command: npx wrangler pages publish dist
      
 
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+ # Invoke jobs via workflows
+ # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   Publish-to-Pages-workflow:
     jobs:
