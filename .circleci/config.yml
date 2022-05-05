@@ -5,16 +5,13 @@ jobs:
       - image: cimg/node:17.2.0
     steps:
       - checkout
-      - run: npm install 
-      - run: npm install wrangler@beta
-      - run: npx wrangler --version
-      - run: npm run build
-      - run: ls dist/
-      # Environment variable for a single command shell
-        # environment:
-        #  CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
-        #  CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
-      # - run: npx wrangler pages publish dist
+      # Run your project's build step
+      - run: npm install && npm run build
+      # Publish with wrangler
+      - run: npx wrangler pages publish dist --project-name=<PROJECT NAME>
+        environment:
+         CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
+         CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
      
 workflows:
   Publish-to-Pages-workflow:
