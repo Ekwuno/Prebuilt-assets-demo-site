@@ -11,8 +11,7 @@ jobs:
       # Run your project's build step
       - run: npm install && npm run build
       # Publish with wrangler
-      - run: npx wrangler pages publish dist --project-name=Yamss
-        
+      - run: npx wrangler pages publish dist 
 
 workflows:
   Publish-to-Pages-workflow:
