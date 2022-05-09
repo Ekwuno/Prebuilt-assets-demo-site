@@ -10,9 +10,9 @@ jobs:
       # Publish with wrangler
       - run: npx wrangler pages publish dist --project-name=Yamss
         environment:
-         CLOUDFLARE_ACCOUNT_ID: CLOUDFLARE_ACCOUNT_ID
-         CLOUDFLARE_API_TOKEN: CLOUDFLARE_API_TOKEN
-     
+          CLOUDFLARE_ACCOUNT_ID: CLOUDFLARE_ACCOUNT_ID
+          CLOUDFLARE_API_TOKEN: CLOUDFLARE_API_TOKEN
+
 workflows:
   Publish-to-Pages-workflow:
     jobs:
